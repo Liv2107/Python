@@ -1,0 +1,27 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    
+    if not (2 <= n <= 10):
+        print("error")
+    
+    
+    arr.sort(reverse=True)
+
+    for score in arr:
+        if not (-100 <= score <= 100):
+            print("error")
+            break
+        
+        # find runner up score
+        max_score = arr[0]
+        runnerup = 0
+
+        if score != max_score:
+            runnerup = score
+            break
+
+        
+    print(runnerup)
+
+    # e.g. inputs, 1: (5) 2: (2 3 6 6 5)

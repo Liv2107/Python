@@ -6,7 +6,8 @@ import numpy as np
 from glob import glob
 
 import cv2
-import matplotlib.pylab as plt
+from matplotlib import pylab as plt
+
 
 files = glob('file destination')
 
@@ -100,4 +101,3 @@ cv2.imwrite('image_name', img) # will provide a boolean output.
 
 
 # tensorflow
-
