@@ -72,11 +72,21 @@ img_shrunk = cv2.resize(img, None, fx=0.25, fy=0.25)
 
 img_resize = cv2.resize(img, (100,100)) 
 
-
+# numpy
 # sharpening and blurring
 
+# cv2 kernals
 
-# numpy
+kernel_sharpening = np.array([[-1,-1,-1],
+                              [-1,9,-1],
+                              [-1,-1,-1]])
+
+kernel_3x3 = np.ones((3,3), np.float32) / 9
+
+sharpened_img = cv2.filter2D(img, -1, kernel_sharpening)
+blurred_img = cv2.filter2D(img, -1, kernel_3x3)
+
+
 
 # Scikit-learn
 
