@@ -87,6 +87,14 @@ sharpened_img = cv2.filter2D(img, -1, kernel_sharpening)
 blurred_img = cv2.filter2D(img, -1, kernel_3x3)
 
 
+# saving an image
+
+# Matplotlib
+plt.imsave('image_name', img)
+
+# OpenCV
+cv2.imwrite('image_name', img) # will provide a boolean output.
+
 
 # Scikit-learn
 
